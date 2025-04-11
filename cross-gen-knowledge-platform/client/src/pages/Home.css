@@ -1,0 +1,111 @@
+.home-background {
+    background-image: url('/ai-generated-8668923_1280.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .home-container {
+    background-image: url('https://cdn.pixabay.com/photo/2024/04/01/13/21/ai-generated-8668923_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .auth-buttons .btn {
+    margin-left: 1rem;
+    padding: 0.6rem 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    background: #ff6b6b;
+    color: white;
+    transition: 0.3s;
+  }
+  
+  .auth-buttons .btn:hover {
+    background: #ff4c4c;
+  }
+  
+  .main-content {
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  .main-heading {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+  
+  .sub-heading {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+  
+  .main-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .btn.action {
+    background: #4f46e5;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    border-radius: 12px;
+    color: white;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .btn.action:hover {
+    background: #4338ca;
+    transform: scale(1.05);
+  }
+  
+  .footer {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .footer-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .footer-btn {
+    background: #34d399;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: white;
+    border-radius: 10px;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .footer-btn:hover {
+    background: #059669;
+    transform: scale(1.05);
+  }
+  
+  

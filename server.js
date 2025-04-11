@@ -4,6 +4,7 @@ const connectDB = require('./config/db');
 const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/users');
 const documentationRoutes = require('./routes/documentation');
+const learningModuleRoutes = require('./routes/learningModules');
 
 
 connectDB();
@@ -17,6 +18,7 @@ app.use('/api/users', userRoutes);
 
 app.use('/api/docs', documentationRoutes);
 
+app.use('/api/modules', learningModuleRoutes);
 
 
 // Error handling

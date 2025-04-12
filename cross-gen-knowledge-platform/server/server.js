@@ -3,6 +3,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import authRoutes from './routes/authRoutes.js';
 
 // Load environment variables from .env
 dotenv.config();
@@ -19,6 +20,7 @@ if (!MONGO_URI) {
 // Middleware
 app.use(cors());
 app.use(express.json());
+app.use('/api/auth', authRoutes);
 
 // MongoDB Connection
 mongoose.connect(MONGO_URI, {

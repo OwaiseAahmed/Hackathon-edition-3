@@ -1,14 +1,34 @@
-import axios from 'axios';
+// src/api/api.js
 
-const API_BASE_URL = 'https://skillbridgeusers-backend.onrender.com/api';
-
-// 🔐 AUTH
-export async function signupUser(data) {
-  const response = await axios.post(`${API_BASE_URL}/auth/signup`, data);
-  return response.data;
-}
-
-export async function loginUser(credentials) {
-  const response = await axios.post(`${API_BASE_URL}/auth/login`, credentials);
-  return response.data;
-}
+export const signupUser = async ({ name, email, password }) => {
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+  
+    const userExists = users.find(user => user.email === email);
+    if (userExists) {
+      throw new Error("User already exists.");
+    }
+  
+    const newUser = { name, email, password };
+    users.push(newUser);
+    localStorage.setItem("users", JSON.stringify(users));
+  
+    return { message: "User registered successfully." };
+  };
+  
+  export const loginUser = async ({ email, password }) => {
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+  
+    const user = users.find(u => u.email === email && u.password === password);
+    if (!user) {
+      throw new Error("Invalid credentials.");
+    }
+  
+    return {
+      user: {
+        name: user.name,
+        email: user.email,
+      },
+      token: "dummy-token", // just for simulation
+    };
+  };
+  
